@@ -98,8 +98,7 @@ img {
 
 .footer {
   grid-area: footer;
-  background-color: aquamarine;
-  text-align: center;
+  background-color: wheat;
 }
 
 form {
