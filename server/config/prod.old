@@ -1,0 +1,10 @@
+module.exports={
+  googleClientID: '503741842922-kaceqbu89jmhgjapsrk7ebq01semj8h7.apps.googleusercontent.com',
+  googleClientSecret: GOOGLE_CLIENT_SECRET,
+  mongoURI: MONGO_URI,
+  cookieKey: COOKIE_KEY,
+  fbClientID: '126241166141625',
+  fbClientSecret: FACEBOOK_CLIENT_SECRET  ,
+  stripePublishableKey: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2',
+  stripeSecretKey: STRIPE_SECRET_KEY
+}

@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 70%;
+  height: auto;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 10em 3em 1fr 5em;
+  grid-template-areas:
+    'header'
+    'navbar'
+    'main-content'
+    'footer';
+  min-height: 100vh;
+  border: 1px solid red;
+}
+
+.main-content-home {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 30em 1fr;
+  grid-template-areas: 'sidebarHome mainHome';
+}
+
+.main-content-dashboard {
+  grid-area: main-content;
+  display: grid;
+  grid-template-columns: 30em 1fr;
+  grid-template-areas: 'sidebarDashboard mainDashboard';
+}
+
+.sidebarDashboard {
+  grid-area: sidebarDashboard;
+  width: 13em;
+  border-right: 1px solid black;
+  padding: 2em;
+  font-size: 1.5em;
+}
+
+.mainDashboard {
+  grid-area: mainDashboard;
+  padding: 2em;
+}
+
+.Description {
+  display: flex;
+}
+
+.sideDescription {
+  width: 40em;
+}
+
+.mainDescription {
+  padding-top: 2em;
+}
+
+.mainDescription > div {
+  margin: 1em 0;
+  width: 80em;
+  background-color: linen;
+}
+
+.header {
+  grid-area: header;
+  background-color: cornflowerblue;
+  border: 5px solid red;
+}
+
+.navbar {
+  grid-area: navbar;
+  display: flex;
+  flex-direction: row;
+  background-color: chartreuse;
+  justify-content: center;
+  gap: 2%;
+  padding: 0.7em;
+}
+
+.sidebarHome {
+  /* display: grid; */
+  justify-items: center;
+  align-items: start;
+  grid-area: sidebarHome;
+  background-color: darkorchid;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.mainHome {
+  grid-area: mainHome;
+  background-color: #f8e71c;
+  padding: 1em;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: aquamarine;
+  text-align: center;
+}
+
+form {
+  margin: 3em auto;
+  width: 60%;
+  padding: 1em;
+  background-color: lightgoldenrodyellow;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.error {
+  color: #d0021b;
+}
+
+.logins {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
+}
+
+.logins > div {
+  border: 1px solid crimson;
+  width: 17em;
+  padding: 1em;
+  margin: 0.2em;
+  color: white;
+  background-color: #9013fe;
+  font-size: 1.3em;
+}
+
+.logins a {
+  color: white;
+}
+
+.logo {
+  padding: 2em 3em;
+}
