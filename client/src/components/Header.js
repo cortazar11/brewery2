@@ -5,7 +5,7 @@ import NavBar from './NavBar';
 const Header=()=>{
   return (
     <div className="header">
-      <div className="logo">BREWERY CONNECTION</div>
+      <div className="logo">BREWERY LINK</div>
     </div>
     
   )
