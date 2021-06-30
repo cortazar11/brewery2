@@ -45,6 +45,9 @@ app.listen(PORT,()=>{
   console.log('v1000')
   console.log('Start...uperu')
 
+  console.log('Start...up')
+
+
 })
 
 
