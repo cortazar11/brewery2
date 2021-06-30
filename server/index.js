@@ -30,7 +30,7 @@ mongoose.connect(keys.mongoURI, {
   useCreateIndex: true,
   useUnifiedTopology: true,
 },()=>{
-  console.log('mongoose connected')
+  console.log('mongoose connecteddddd')
 });
 
 authRoutes(app);
@@ -43,8 +43,10 @@ const PORT= process.env.PORT || 5000;
 
 app.listen(PORT,()=>{
   console.log('v1000')
-  console.log('Starting up')
 
+  console.log('Start...uperu')
+
+ 
 })
 
 
