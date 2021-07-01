@@ -44,7 +44,7 @@ const PORT= process.env.PORT || 5000;
 app.listen(PORT,()=>{
   console.log('v1000')
 
-  console.log('Start...up')
+  console.log('Starting...up')
 
  
 
