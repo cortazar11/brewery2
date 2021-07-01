@@ -15,8 +15,10 @@ passport.deserializeUser((id,done)=>{
 })
 
 passport.use(new GoogleStrategy({
-  clientID: keys.googleClientID,
-  clientSecret: keys.googleClientSecret,
+  // clientID: keys.googleClientID,
+  // clientSecret: keys.googleClientSecret,
+  clientID: process.env.googleClientID,
+  clientSecret: process.env.googleClientSecret,
   callbackURL: '/auth/google/callback'
 },async (accessToken, refreshToken,profile,done)=>{
   const existingUser=await User.findOne({googleId:profile.id})
@@ -29,8 +31,10 @@ passport.use(new GoogleStrategy({
 }))
 
 passport.use(new FacebookStrategy({
-  clientID: keys.fbClientID,
-  clientSecret: keys.fbClientSecret,
+  // clientID: keys.fbClientID,
+  // clientSecret: keys.fbClientSecret,
+  clientID: process.env.fbClientID,
+  clientSecret: process.env.fbClientSecret,
   callbackURL: '/auth/facebook/callback'
 }, async (accessToken, refreshToken, profile, done)=>{
   console.log('fbAccessToken',accessToken)

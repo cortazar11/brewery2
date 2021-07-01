@@ -18,19 +18,21 @@ const app= express();
 app.use(bodyParser.json())
 app.use(cookieSession({
   maxAge: 30 * 24* 60 *60 *1000,
-  keys: [keys.cookieKey],
+  // keys: [keys.cookieKey],
+  keys: [process.env.cookieKey],
   secure: false
 }))
 
 app.use(passport.initialize())
 app.use(passport.session())
 
-mongoose.connect(keys.mongoURI, {
+// mongoose.connect(keys.mongoURI, {
+mongoose.connect(process.env.mongoURI, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
 },()=>{
-  console.log('mongoose connected')
+  console.log('mongoose connecteddddd')
 });
 
 authRoutes(app);
@@ -43,8 +45,12 @@ const PORT= process.env.PORT || 5000;
 
 app.listen(PORT,()=>{
   console.log('v1000')
-  console.log('Starting up up...')
 
+  console.log('Start up more')
+
+ 
+
+ 
 })
 
 
