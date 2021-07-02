@@ -15,38 +15,38 @@ spec:
       containers:
         - name: server
           image: miguelmartinez11/breweryserver
-          env:
-            - name: googleClientID
-              value: '503741842922-kaceqbu89jmhgjapsrk7ebq01semj8h7.apps.googleusercontent.com'
-            - name: fbClientID
-              value: '126241166141625'
-            - name: stripePublishableKey
-              value: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2'
-            - name: googleClientSecret
-              valueFrom:
-                secretKeyRef:
-                  name: google-secret
-                  key: googleClientSecret
-            - name: fbClientSecret
-              valueFrom:
-                secretKeyRef:
-                  name: facebook-secret
-                  key: fbClientSecret
-            - name: cookieKey
-              valueFrom:
-                secretKeyRef:
-                  name: cookie-secret
-                  key: cookieKey
-            - name: mongoURI
-              valueFrom:
-                secretKeyRef:
-                  name: mongouri-secret
-                  key: mongoURI
-            - name: stripeSecretKey
-              valueFrom:
-                secretKeyRef:
-                  name: stripe-secret
-                  key: stripeSecretKey
+          # env:
+          #   - name: googleClientID
+          #     value: '503741842922-kaceqbu89jmhgjapsrk7ebq01semj8h7.apps.googleusercontent.com'
+          #   - name: fbClientID
+          #     value: '126241166141625'
+          #   - name: stripePublishableKey
+          #     value: 'pk_test_XmO5St3xuRBLP4d8XTeOeXU2'
+          #   - name: googleClientSecret
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: google-secret
+          #         key: googleClientSecret
+          #   - name: fbClientSecret
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: facebook-secret
+          #         key: fbClientSecret
+          #   - name: cookieKey
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: cookie-secret
+          #         key: cookieKey
+          #   - name: mongoURI
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: mongouri-secret
+          #         key: mongoURI
+          #   - name: stripeSecretKey
+          #     valueFrom:
+          #       secretKeyRef:
+          #         name: stripe-secret
+          #         key: stripeSecretKey
 ---
 apiVersion: v1
 kind: Service
